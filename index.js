@@ -54,7 +54,9 @@ const streamData = () => {
   setInterval(async () => {
     const data = generateIoTData();
     console.log(JSON.stringify(data, null, 2)); // Print to console
-    await publishData(JSON.stringify(data));
+    for(let i=0;i<data.length;i++) {
+      await publishData(JSON.stringify(data[i]));
+    }
   }, 5000);
 };
 
