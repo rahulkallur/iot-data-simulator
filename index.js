@@ -33,8 +33,8 @@ const generateIoTData = () => {
       timestamp: Math.floor(Date.now() / 1000),
       latitude: location.latitude,
       longitude: location.longitude,
-      speed: (Math.random() * 100).toFixed(2), // Speed in km/h
-      battery: (Math.random() * 100).toFixed(0), // Battery percentage
+      speed: parseInt((Math.random() * 100).toFixed(2)), // Speed in km/h
+      battery: parseInt((Math.random() * 100).toFixed(0)), // Battery percentage
     };
   });
 };
